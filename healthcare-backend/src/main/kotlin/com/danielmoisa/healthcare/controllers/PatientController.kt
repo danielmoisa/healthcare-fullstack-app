@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("/api")
 class PatientController(private val patientService: PatientService) {
 
-//    @CrossOrigin(origins = ["http://localhost:3000"])
     @GetMapping("/patients")
     fun getPatients(): MutableIterable<Patient> = patientService.getPatient()
 
